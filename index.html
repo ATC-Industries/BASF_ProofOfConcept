@@ -179,6 +179,8 @@
       .card {
         padding: 24px;
         position: relative;
+        display: flex;
+        flex-direction: column;
       }
 
       .card.featured {
@@ -261,6 +263,17 @@
 
       .buy-wrap {
         margin-top: auto;
+        padding-top: 16px;
+      }
+
+      .button-slot {
+        min-height: 170px;
+        display: flex;
+        align-items: flex-end;
+      }
+
+      .button-slot stripe-buy-button {
+        width: 100%;
       }
 
       .mini-note {
@@ -404,7 +417,7 @@
                 <li>Wireless connectivity license for year one</li>
                 <li>Fastest setup path for new dealer orders</li>
               </ul>
-              <div class="buy-wrap">
+              <div class="buy-wrap button-slot">
                 <stripe-buy-button
                   buy-button-id="buy_btn_0T8wd61HeeGH2HGCDlXj5z6Q"
                   publishable-key="pk_live_IFeIKvwS33QCIoxVgsBilHRY">
@@ -427,7 +440,7 @@
                 <li>USB cable included</li>
                 <li>GPS antenna, mounting pads, and quick start guide included</li>
               </ul>
-              <div class="buy-wrap">
+              <div class="buy-wrap button-slot">
                 <stripe-buy-button
                   buy-button-id="buy_btn_0T8weY1HeeGH2HGCSStr8RCt"
                   publishable-key="pk_live_IFeIKvwS33QCIoxVgsBilHRY">
@@ -450,7 +463,7 @@
                 <li>Documentation and as-applied data returned to platform</li>
                 <li>Automatic renewal unless canceled</li>
               </ul>
-              <div class="buy-wrap">
+              <div class="buy-wrap button-slot">
                 <stripe-buy-button
                   buy-button-id="buy_btn_0T8wf41HeeGH2HGCRMip1vGo"
                   publishable-key="pk_live_IFeIKvwS33QCIoxVgsBilHRY">
@@ -461,6 +474,10 @@
 
           <div class="notice">
             <strong>Important:</strong> xConnect may only be used to connect to the xarvio FIELD MANAGER platform. All purchases on this page are processed by Agri-Tronix Corporation as the U.S. distributor.
+          </div>
+
+          <div class="notice">
+            xarvio®, xConnect, and related brand assets are property of BASF Digital Farming GmbH. Copyright © BASF Digital Farming GmbH 2026.
           </div>
         </div>
       </section>
@@ -497,7 +514,7 @@
 
     <footer>
       <div class="container">
-        © Agri-Tronix Corporation. U.S. distributor for xConnect purchases through this portal.
+        © Agri-Tronix Corporation. U.S. distributor for xConnect purchases through this portal. xarvio®, xConnect, and related brand assets are property of BASF Digital Farming GmbH. Copyright © BASF Digital Farming GmbH 2026.
       </div>
     </footer>
   </body>
