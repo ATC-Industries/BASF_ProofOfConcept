@@ -509,9 +509,18 @@
     </main>
 
     <footer>
-      <div class="container">
-        © Agri-Tronix Corporation. U.S. distributor for xConnect purchases through this portal. xarvio®, xConnect, and related brand assets are property of BASF Digital Farming GmbH. Copyright © BASF Digital Farming GmbH 2026.
+      <div class="container footer-inner">
+        <div>
+          © <span id="year"></span> Agri-Tronix Corporation • U.S. distributor for xConnect purchases through this portal
+        </div>
+        <div>
+          xarvio®, xConnect, and related brand assets are property of BASF Digital Farming GmbH
+        </div>
       </div>
     </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
