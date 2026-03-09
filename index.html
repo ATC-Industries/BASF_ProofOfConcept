@@ -320,9 +320,22 @@
       }
 
       footer {
-        padding: 18px 0 40px;
+        padding: 36px 0 48px;
+        margin-top: 40px;
+        border-top: 1px solid var(--line);
         color: var(--muted);
-        font-size: 0.92rem;
+        font-size: 0.9rem;
+        text-align: center;
+      }
+
+      .footer-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+        max-width: 700px;
+        margin: 0 auto;
       }
 
       @media (max-width: 980px) {
@@ -511,10 +524,10 @@
     <footer>
       <div class="container footer-inner">
         <div>
-          © <span id="year"></span> Agri-Tronix Corporation • U.S. distributor for xConnect purchases through this portal
+          © <span id="year"></span> Agri-Tronix Corporation
         </div>
         <div>
-          xarvio®, xConnect, and related brand assets are property of BASF Digital Farming GmbH
+          xConnect and xarvio are trademarks of BASF Digital Farming GmbH
         </div>
       </div>
     </footer>
