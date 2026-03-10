@@ -8,9 +8,6 @@
       name="description"
       content="Purchase xConnect hardware and wireless connectivity licenses from Agri-Tronix Corporation, the U.S. distributor."
     />
-    <meta property="og:image" content="https://d33ffo0miikj3g.cloudfront.net/images/xarvio-og-logo.webp" data-next-head="">
-    <link rel="icon" type="image/x-icon" href="https://ag.xarvio.com/favicon.ico" data-next-head="">
-    <meta name="robots" content="noindex, nofollow, noarchive">
     <script async src="https://js.stripe.com/v3/buy-button.js"></script>
     <style>
       :root {
@@ -35,11 +32,21 @@
 
       body {
         margin: 0;
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-          "Segoe UI", sans-serif;
+        font-family:
+          Inter,
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
         color: var(--text);
         background:
-          radial-gradient(circle at top right, rgba(255, 48, 253, 0.08), transparent 24%),
+          radial-gradient(
+            circle at top right,
+            rgba(255, 48, 253, 0.08),
+            transparent 24%
+          ),
           linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
         line-height: 1.5;
       }
@@ -104,7 +111,11 @@
       }
 
       .gradient-text {
-        background: linear-gradient(273deg, var(--purple) -19.75%, var(--pink) 98.85%);
+        background: linear-gradient(
+          273deg,
+          var(--purple) -19.75%,
+          var(--pink) 98.85%
+        );
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -129,6 +140,15 @@
 
       .hero-card {
         padding: 22px;
+      }
+
+      .hero-product-image {
+        width: 100%;
+        max-width: 360px;
+        display: block;
+        margin: 0 auto 18px;
+        border-radius: 16px;
+        background: #ffffff;
       }
 
       .hero-list {
@@ -207,7 +227,11 @@
 
       .featured .badge {
         color: #ffffff;
-        background: linear-gradient(273deg, var(--purple) -19.75%, var(--pink) 98.85%);
+        background: linear-gradient(
+          273deg,
+          var(--purple) -19.75%,
+          var(--pink) 98.85%
+        );
       }
 
       .title-row {
@@ -264,6 +288,42 @@
         font-weight: 900;
       }
 
+      .product-image-wrap {
+        aspect-ratio: 4 / 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0 18px;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: linear-gradient(180deg, #ffffff 0%, #faf7fb 100%);
+        overflow: hidden;
+      }
+
+      .product-image-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .manual-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 16px;
+        border-radius: 999px;
+        border: 1px solid rgba(136, 40, 124, 0.18);
+        color: var(--purple);
+        text-decoration: none;
+        font-weight: 700;
+        background: rgba(136, 40, 124, 0.04);
+      }
+
+      .manual-link:hover {
+        background: rgba(136, 40, 124, 0.08);
+      }
+
       .buy-wrap {
         margin-top: auto;
         padding-top: 16px;
@@ -296,8 +356,13 @@
 
       .split {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+      }
+
+      .support.full {
+        grid-column: 1 / -1;
+        width: 100%;
       }
 
       .support {
@@ -377,29 +442,57 @@
       <div class="container">
         <div class="topbar">
           <div class="logo-wrap">
-            <img src="https://ag.xarvio.com/images/logo.webp" alt="xarvio logo" />
+            <img
+              src="https://ag.xarvio.com/images/logo.webp"
+              alt="xarvio logo"
+            />
             <strong>U.S. Dealer Purchasing Portal</strong>
           </div>
-          <a href="https://billing.stripe.com/p/login/00w8wwffYcOtbam3WgeME00">Manage subscription</a>
+          <a href="https://billing.stripe.com/p/login/00w8wwffYcOtbam3WgeME00"
+            >Manage subscription</a
+          >
         </div>
 
         <div class="hero-grid">
           <div>
-            
-            <h1>
-              Purchase <span class="gradient-text">xConnect</span>
-            </h1>
+            <h1>Purchase <span class="gradient-text">xConnect</span></h1>
             <p class="lede">
-              This portal is operated by Agri-Tronix Corporation, the U.S. distributor for xConnect. Use the options below to purchase the hardware device, the annual wireless connectivity license, or both together in a single checkout.
+              This portal is operated by Agri-Tronix Corporation, the U.S.
+              distributor for xConnect. Use the options below to purchase the
+              hardware device, the annual wireless connectivity license, or both
+              together in a single checkout.
             </p>
           </div>
 
           <aside class="hero-card">
+            <img
+              class="hero-product-image"
+              src="images/xCONNECT_2.0_visual.png"
+              alt="xConnect packaging"
+            />
             <strong>What xConnect does</strong>
             <ul class="hero-list">
-              <li><span class="check">✓</span><span>Connects via ISOBUS/CANBUS and USB for mixed-fleet compatibility</span></li>
-              <li><span class="check">✓</span><span>Sends prescription maps to the terminal and returns documentation data</span></li>
-              <li><span class="check">✓</span><span>Supports automatic documentation and over-the-air updates</span></li>
+              <li>
+                <span class="check">✓</span
+                ><span
+                  >Connects via ISOBUS/CANBUS and USB for mixed-fleet
+                  compatibility</span
+                >
+              </li>
+              <li>
+                <span class="check">✓</span
+                ><span
+                  >Sends prescription maps to the terminal and returns
+                  documentation data</span
+                >
+              </li>
+              <li>
+                <span class="check">✓</span
+                ><span
+                  >Supports automatic documentation and over-the-air
+                  updates</span
+                >
+              </li>
             </ul>
           </aside>
         </div>
@@ -411,19 +504,31 @@
         <div class="container">
           <h2>Available purchase options</h2>
           <p class="section-copy">
-            There are only two products in this program: the xConnect hardware kit and the annual wireless connectivity license. Most customers will want the combined option so the device and first year of connectivity are handled in one checkout.
+            There are only two products in this program: the xConnect hardware
+            kit and the annual wireless connectivity license. Most customers
+            will want the combined option so the device and first year of
+            connectivity are handled in one checkout.
           </p>
 
           <div class="grid">
             <article class="card featured">
               <span class="badge">Recommended</span>
+              <div class="product-image-wrap">
+                <img
+                  src="images/xCONNECT_2.0_visual.png"
+                  alt="xConnect packaging"
+                />
+              </div>
               <div class="title-row">
                 <h3>xConnect Kit + 1 Year License</h3>
               </div>
               <p class="price">$1,470</p>
-              <p class="price-sub">One-time checkout today, then $370/year for license renewal</p>
+              <p class="price-sub">
+                One-time checkout today, then $370/year for license renewal
+              </p>
               <p>
-                Best option for new purchases. Includes the hardware kit plus the first year of wireless connectivity.
+                Best option for new purchases. Includes the hardware kit plus
+                the first year of wireless connectivity.
               </p>
               <ul class="feature-list">
                 <li>xConnect hardware device</li>
@@ -433,43 +538,61 @@
               <div class="buy-wrap button-slot">
                 <stripe-buy-button
                   buy-button-id="buy_btn_0T8wd61HeeGH2HGCDlXj5z6Q"
-                  publishable-key="pk_live_IFeIKvwS33QCIoxVgsBilHRY">
+                  publishable-key="pk_live_IFeIKvwS33QCIoxVgsBilHRY"
+                >
                 </stripe-buy-button>
               </div>
             </article>
 
             <article class="card">
               <span class="badge">Hardware</span>
+              <div class="product-image-wrap">
+                <img
+                  src="images/xconnect in hand.jpg"
+                  alt="xConnect device in hand"
+                />
+              </div>
               <div class="title-row">
                 <h3>xConnect Kit</h3>
               </div>
               <p class="price">$1,100</p>
               <p class="price-sub">One-time purchase</p>
               <p>
-                Wireless connectivity hardware for use with the xarvio® FIELD MANAGER platform.
+                Wireless connectivity hardware for use with the xarvio® FIELD
+                MANAGER platform.
               </p>
               <ul class="feature-list">
                 <li>ISOBUS/CANBUS cable included</li>
                 <li>USB cable included</li>
-                <li>GPS antenna, mounting pads, and quick start guide included</li>
+                <li>
+                  GPS antenna, mounting pads, and quick start guide included
+                </li>
               </ul>
               <div class="buy-wrap button-slot">
                 <stripe-buy-button
                   buy-button-id="buy_btn_0T8weY1HeeGH2HGCSStr8RCt"
-                  publishable-key="pk_live_IFeIKvwS33QCIoxVgsBilHRY">
+                  publishable-key="pk_live_IFeIKvwS33QCIoxVgsBilHRY"
+                >
                 </stripe-buy-button>
               </div>
             </article>
 
             <article class="card">
               <span class="badge">Subscription</span>
+              <div class="product-image-wrap">
+                <img
+                  src="images/Screenshot 2026-03-09 223913.png"
+                  alt="xConnect device diagram"
+                />
+              </div>
               <div class="title-row">
                 <h3>Wireless Connectivity License</h3>
               </div>
               <p class="price">$370</p>
               <p class="price-sub">Billed yearly</p>
               <p>
-                Annual license for wireless connectivity and data exchange with xarvio® FIELD MANAGER.
+                Annual license for wireless connectivity and data exchange with
+                xarvio® FIELD MANAGER.
               </p>
               <ul class="feature-list">
                 <li>Prescription map transfer to compatible terminals</li>
@@ -479,17 +602,18 @@
               <div class="buy-wrap button-slot">
                 <stripe-buy-button
                   buy-button-id="buy_btn_0T8wf41HeeGH2HGCRMip1vGo"
-                  publishable-key="pk_live_IFeIKvwS33QCIoxVgsBilHRY">
+                  publishable-key="pk_live_IFeIKvwS33QCIoxVgsBilHRY"
+                >
                 </stripe-buy-button>
               </div>
             </article>
           </div>
 
           <div class="notice">
-            <strong>Important:</strong> xConnect may only be used to connect to the xarvio FIELD MANAGER platform. All purchases on this page are processed by Agri-Tronix Corporation as the U.S. distributor.
+            <strong>Important:</strong> xConnect may only be used to connect to
+            the xarvio FIELD MANAGER platform. All purchases on this page are
+            processed by Agri-Tronix Corporation as the U.S. distributor.
           </div>
-
-          
         </div>
       </section>
 
@@ -498,7 +622,8 @@
           <div class="support">
             <h2>Support</h2>
             <p class="section-copy">
-              Need help with setup, product questions, or support details before purchase? Use the contact information below.
+              Need help with setup, product questions, or support details before
+              purchase? Use the contact information below.
             </p>
             <dl>
               <dt>Email</dt>
@@ -511,12 +636,39 @@
           </div>
 
           <div class="support">
-            <h2>Dealer account management</h2>
+            <h2>User manual</h2>
             <p class="section-copy">
-              Use the customer portal to manage billing details, payment methods, and active subscriptions.
+              View the current preview of the xConnect quick start manual. This
+              document is a temporary placeholder and can be updated as newer
+              versions are provided.
             </p>
             <p>
-              <a href="https://billing.stripe.com/p/login/00w8wwffYcOtbam3WgeME00">Open customer portal</a>
+              <a
+                class="manual-link"
+                href="docs/WORKFILE Manual InDesign_English_preview_03 03.pdf"
+                target="_blank"
+                rel="noopener"
+              >
+                View manual (PDF)
+              </a>
+            </p>
+          </div>
+
+          <div class="support full">
+            <h2>Subscription management</h2>
+            <p class="section-copy">
+              Existing customers can use the billing portal to update payment
+              methods, manage subscriptions, or review billing details.
+            </p>
+            <p>
+              <a
+                class="manual-link"
+                href="https://billing.stripe.com/p/login/00w8wwffYcOtbam3WgeME00"
+                target="_blank"
+                rel="noopener"
+              >
+                Open billing portal
+              </a>
             </p>
           </div>
         </div>
@@ -525,9 +677,7 @@
 
     <footer>
       <div class="container footer-inner">
-        <div>
-          © <span id="year"></span> Agri-Tronix Corporation
-        </div>
+        <div>© <span id="year"></span> Agri-Tronix Corporation</div>
         <div>
           xConnect and xarvio are trademarks of BASF Digital Farming GmbH
         </div>
