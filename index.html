@@ -10,7 +10,7 @@
       name="description"
       content="Purchase xConnect hardware and wireless connectivity licenses from Agri-Tronix Corporation, the U.S. distributor."
     />
-    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
     <style>
       :root {
         --purple: rgb(136, 40, 124);
@@ -329,16 +329,55 @@
       .buy-wrap {
         margin-top: auto;
         padding-top: 16px;
-      }
-
-      .button-slot {
-        min-height: 170px;
         display: flex;
         align-items: flex-end;
       }
 
-      .button-slot stripe-buy-button {
+      .cta-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
+        min-height: 48px;
+        padding: 14px 18px;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.98rem;
+        line-height: 1.2;
+        text-align: center;
+        background: linear-gradient(
+          273deg,
+          var(--purple) -19.75%,
+          var(--pink) 98.85%
+        );
+        color: #ffffff !important;
+        transition:
+          transform 0.15s ease,
+          box-shadow 0.15s ease,
+          opacity 0.15s ease;
+        box-shadow: 0 10px 20px rgba(136, 40, 124, 0.18);
+      }
+
+      .cta-button:hover {
+        transform: translateY(-1px);
+        opacity: 0.96;
+      }
+
+      .cta-button:visited {
+        color: #ffffff !important;
+      }
+
+      .cta-secondary {
+        background: rgba(136, 40, 124, 0.06);
+        color: var(--purple) !important;
+        border: 1px solid rgba(136, 40, 124, 0.18);
+        box-shadow: none;
+      }
+
+      .cta-secondary:visited {
+        color: var(--purple) !important;
       }
 
       .mini-note {
@@ -537,12 +576,14 @@
                 <li>Wireless connectivity license for year one</li>
                 <li>Fastest setup path for new dealer orders</li>
               </ul>
-              <div class="buy-wrap button-slot">
-                <stripe-buy-button
-                  buy-button-id="buy_btn_0T8wd61HeeGH2HGCDlXj5z6Q"
-                  publishable-key="pk_live_IFeIKvwS33QCIoxVgsBilHRY"
+              <div class="buy-wrap">
+                <a
+                  class="cta-button"
+                  href="https://buy.stripe.com/14A1443xgg0F1zM64oeME02"
+                  target="_blank"
+                  rel="noopener"
+                  >Buy device + 1 year license</a
                 >
-                </stripe-buy-button>
               </div>
             </article>
 
@@ -570,12 +611,14 @@
                   GPS antenna, mounting pads, and quick start guide included
                 </li>
               </ul>
-              <div class="buy-wrap button-slot">
-                <stripe-buy-button
-                  buy-button-id="buy_btn_0T8weY1HeeGH2HGCSStr8RCt"
-                  publishable-key="pk_live_IFeIKvwS33QCIoxVgsBilHRY"
+              <div class="buy-wrap">
+                <a
+                  class="cta-button cta-secondary"
+                  href="https://buy.stripe.com/dRmdQQ0l48ydceq0K4eME04"
+                  target="_blank"
+                  rel="noopener"
+                  >Buy device only</a
                 >
-                </stripe-buy-button>
               </div>
             </article>
 
@@ -601,12 +644,14 @@
                 <li>Documentation and as-applied data returned to platform</li>
                 <li>Automatic renewal unless canceled</li>
               </ul>
-              <div class="buy-wrap button-slot">
-                <stripe-buy-button
-                  buy-button-id="buy_btn_0T8wf41HeeGH2HGCRMip1vGo"
-                  publishable-key="pk_live_IFeIKvwS33QCIoxVgsBilHRY"
+              <div class="buy-wrap">
+                <a
+                  class="cta-button cta-secondary"
+                  href="https://buy.stripe.com/dRm3cc8RA3dTceq9gAeME03"
+                  target="_blank"
+                  rel="noopener"
+                  >Buy license only</a
                 >
-                </stripe-buy-button>
               </div>
             </article>
           </div>
