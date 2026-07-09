@@ -130,7 +130,7 @@ h1 {
 
 .hero-product-image {
   width: 100%;
-  max-width: 280px;
+  max-width: 420px;
   display: block;
   margin: 0;
 }
@@ -412,8 +412,12 @@ h1 {
 }
 
 .notice {
-  padding: 18px 20px;
-  margin-top: 24px;
+  padding: 14px 16px;
+  margin-top: 28px;
+  border: 1px solid rgba(136, 40, 124, 0.18);
+  border-radius: 14px;
+  box-shadow: none;
+  background: rgba(136, 40, 124, 0.04);
 }
 
 .notice strong {
@@ -423,7 +427,8 @@ h1 {
 .split {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 28px 36px;
+  padding-top: 28px;
 }
 
 .support.full {
@@ -432,7 +437,25 @@ h1 {
 }
 
 .support {
-  padding: 22px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  position: relative;
+}
+
+.support::before {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 2px;
+  margin-bottom: 14px;
+  background: rgba(136, 40, 124, 0.24);
+}
+
+.support h2 {
+  margin-bottom: 10px;
 }
 
 .support dl {
@@ -471,6 +494,10 @@ footer {
   margin: 0 auto;
 }
 
+.footer-note {
+  max-width: 760px;
+}
+
 @media (max-width: 980px) {
   .hero-grid,
   .benefit-list,
@@ -490,9 +517,7 @@ footer {
     align-items: flex-start;
   }
 
-  .card,
-  .support,
-  .notice {
+  .card {
     padding: 18px;
   }
 
