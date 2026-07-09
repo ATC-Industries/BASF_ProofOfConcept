@@ -10,477 +10,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
+    <link rel="stylesheet" href="styles.css" />
     <meta
       name="description"
       content="Purchase xarvio® connect hardware and wireless connectivity licenses from Agri-Tronix Corporation, the U.S. distributor."
     />
-
-    <style>
-      :root {
-        --purple: rgb(136, 40, 124);
-        --pink: #ff30fd;
-        --bg: #f7f4f8;
-        --text: #1d1a22;
-        --muted: #5e5666;
-        --line: rgba(136, 40, 124, 0.14);
-        --card: #ffffff;
-        --shadow: 0 12px 30px rgba(67, 31, 72, 0.08);
-        --radius: 20px;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        margin: 0;
-        font-family:
-          Inter,
-          ui-sans-serif,
-          system-ui,
-          -apple-system,
-          BlinkMacSystemFont,
-          "Segoe UI",
-          sans-serif;
-        color: var(--text);
-        background:
-          radial-gradient(
-            circle at top right,
-            rgba(255, 48, 253, 0.08),
-            transparent 24%
-          ),
-          linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
-        line-height: 1.5;
-      }
-
-      a {
-        color: inherit;
-      }
-
-      .container {
-        width: min(1120px, calc(100% - 32px));
-        margin: 0 auto;
-      }
-
-      .hero {
-        padding: 28px 0 20px;
-      }
-
-      .topbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-        margin-bottom: 32px;
-      }
-
-      .logo-wrap {
-        display: flex;
-        align-items: center;
-        gap: 14px;
-      }
-
-      .logo-wrap img {
-        height: 34px;
-        width: auto;
-      }
-
-      .eyebrow {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 8px 12px;
-        border-radius: 999px;
-        background: rgba(136, 40, 124, 0.08);
-        color: var(--purple);
-        font-size: 13px;
-        font-weight: 700;
-        letter-spacing: 0.02em;
-      }
-
-      .hero-grid {
-        display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: 28px;
-        align-items: center;
-      }
-
-      h1 {
-        margin: 16px 0 14px;
-        font-size: clamp(2.1rem, 4.3vw, 4.2rem);
-        line-height: 1.02;
-        letter-spacing: -0.04em;
-      }
-
-      .gradient-text {
-        background: linear-gradient(
-          273deg,
-          var(--purple) -19.75%,
-          var(--pink) 98.85%
-        );
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-
-      .lede {
-        max-width: 680px;
-        font-size: 1.07rem;
-        color: var(--muted);
-        margin: 0 0 22px;
-      }
-
-      .hero-card,
-      .card,
-      .notice,
-      .support {
-        background: var(--card);
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        box-shadow: var(--shadow);
-      }
-
-      .hero-card {
-        padding: 22px;
-      }
-
-      .hero-product-image {
-        width: 100%;
-        max-width: 360px;
-        display: block;
-        margin: 0 auto 18px;
-        border-radius: 16px;
-        background: #ffffff;
-      }
-
-      .hero-list {
-        list-style: none;
-        padding: 0;
-        margin: 16px 0 0;
-        display: grid;
-        gap: 12px;
-      }
-
-      .hero-list li {
-        display: flex;
-        gap: 10px;
-        color: var(--muted);
-      }
-
-      .check {
-        flex: 0 0 24px;
-        width: 24px;
-        height: 24px;
-        border-radius: 999px;
-        background: rgba(136, 40, 124, 0.12);
-        color: var(--purple);
-        display: grid;
-        place-items: center;
-        font-weight: 800;
-      }
-
-      .section {
-        padding: 26px 0;
-      }
-
-      .section h2 {
-        margin: 0 0 8px;
-        font-size: clamp(1.6rem, 2vw, 2.1rem);
-        letter-spacing: -0.03em;
-      }
-
-      .section p.section-copy {
-        margin: 0 0 22px;
-        color: var(--muted);
-        max-width: 760px;
-      }
-
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-      }
-
-      .card {
-        padding: 24px;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .card.featured {
-        border-color: rgba(136, 40, 124, 0.34);
-        box-shadow: 0 18px 36px rgba(136, 40, 124, 0.16);
-      }
-
-      .badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 7px 11px;
-        border-radius: 999px;
-        font-size: 12px;
-        font-weight: 800;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
-        color: var(--purple);
-        background: rgba(136, 40, 124, 0.08);
-      }
-
-      .featured .badge {
-        color: #ffffff;
-        background: linear-gradient(
-          273deg,
-          var(--purple) -19.75%,
-          var(--pink) 98.85%
-        );
-      }
-
-      .title-row {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        gap: 12px;
-        margin: 16px 0 8px;
-      }
-
-      .title-row h3 {
-        margin: 0;
-        font-size: 1.3rem;
-        line-height: 1.15;
-      }
-
-      .price {
-        margin: 0 0 6px;
-        font-size: 2rem;
-        line-height: 1;
-        letter-spacing: -0.04em;
-      }
-
-      .price-sub {
-        margin: 0 0 14px;
-        color: var(--muted);
-        font-size: 0.95rem;
-      }
-
-      .card p {
-        margin: 0 0 16px;
-        color: var(--muted);
-      }
-
-      .feature-list {
-        list-style: none;
-        padding: 0;
-        margin: 0 0 20px;
-        display: grid;
-        gap: 10px;
-      }
-
-      .feature-list li {
-        display: flex;
-        align-items: flex-start;
-        gap: 10px;
-        color: var(--text);
-        font-size: 0.97rem;
-      }
-
-      .feature-list li::before {
-        content: "•";
-        color: var(--purple);
-        font-weight: 900;
-      }
-
-      .product-image-wrap {
-        aspect-ratio: 4 / 3;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 10px 0 18px;
-        border: 1px solid var(--line);
-        border-radius: 18px;
-        background: linear-gradient(180deg, #ffffff 0%, #faf7fb 100%);
-        overflow: hidden;
-      }
-
-      .product-image-wrap img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-      }
-
-      .manual-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 12px 16px;
-        border-radius: 999px;
-        border: 1px solid rgba(136, 40, 124, 0.18);
-        color: var(--purple);
-        text-decoration: none;
-        font-weight: 700;
-        background: rgba(136, 40, 124, 0.04);
-      }
-
-      .manual-link:hover {
-        background: rgba(136, 40, 124, 0.08);
-      }
-
-      .buy-wrap {
-        margin-top: auto;
-        padding-top: 16px;
-        display: flex;
-        align-items: flex-end;
-      }
-
-      .cta-button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        min-height: 48px;
-        padding: 14px 18px;
-        border-radius: 999px;
-        border: 1px solid transparent;
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 0.98rem;
-        line-height: 1.2;
-        text-align: center;
-        background: linear-gradient(
-          273deg,
-          var(--purple) -19.75%,
-          var(--pink) 98.85%
-        );
-        color: #ffffff !important;
-        transition:
-          transform 0.15s ease,
-          box-shadow 0.15s ease,
-          opacity 0.15s ease;
-        box-shadow: 0 10px 20px rgba(136, 40, 124, 0.18);
-      }
-
-      .cta-button:hover {
-        transform: translateY(-1px);
-        opacity: 0.96;
-      }
-
-      .cta-button:visited {
-        color: #ffffff !important;
-      }
-
-      .cta-secondary {
-        background: rgba(136, 40, 124, 0.06);
-        color: var(--purple) !important;
-        border: 1px solid rgba(136, 40, 124, 0.18);
-        box-shadow: none;
-      }
-
-      .cta-secondary:visited {
-        color: var(--purple) !important;
-      }
-
-      .mini-note {
-        margin-top: 14px;
-        font-size: 0.88rem;
-        color: var(--muted);
-      }
-
-      .notice {
-        padding: 18px 20px;
-        margin-top: 24px;
-      }
-
-      .notice strong {
-        color: var(--text);
-      }
-
-      .split {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-      }
-
-      .support.full {
-        grid-column: 1 / -1;
-        width: 100%;
-      }
-
-      .support {
-        padding: 22px;
-      }
-
-      .support dl {
-        margin: 14px 0 0;
-        display: grid;
-        grid-template-columns: 120px 1fr;
-        gap: 10px 12px;
-      }
-
-      .support dt {
-        font-weight: 700;
-        color: var(--text);
-      }
-
-      .support dd {
-        margin: 0;
-        color: var(--muted);
-      }
-
-      footer {
-        padding: 36px 0 48px;
-        margin-top: 40px;
-        border-top: 1px solid var(--line);
-        color: var(--muted);
-        font-size: 0.9rem;
-        text-align: center;
-      }
-
-      .footer-inner {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        align-items: center;
-        justify-content: center;
-        max-width: 700px;
-        margin: 0 auto;
-      }
-
-      @media (max-width: 980px) {
-        .hero-grid,
-        .grid,
-        .split {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      @media (max-width: 640px) {
-        .container {
-          width: min(100% - 20px, 1120px);
-        }
-
-        .topbar {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-
-        .card,
-        .hero-card,
-        .support,
-        .notice {
-          padding: 18px;
-        }
-
-        .support dl {
-          grid-template-columns: 1fr;
-          gap: 4px;
-        }
-      }
-    </style>
   </head>
   <body>
     <header class="hero">
@@ -511,51 +45,174 @@
 
         <div class="hero-grid">
           <div>
-            <h1>Purchase <span class="gradient-text">xarvio® connect</span></h1>
+            <h1>Purchase xarvio® CONNECT 2.0</h1>
+            <p class="hero-positioning">
+              Universal machine connectivity for mixed farm fleets. Built for
+              U.S. farms using xarvio® FIELD MANAGER.
+            </p>
             <p class="lede">
               This portal is operated by Agri-Tronix Corporation, the U.S.
-              distributor for xarvio® connect. Use the options below to purchase
-              the hardware device, the annual wireless connectivity license, or
-              both together in a single checkout.
+              distributor for xarvio® CONNECT 2.0. Use the options below to
+              purchase the hardware device, the annual wireless connectivity
+              license, or both together in a single checkout.
             </p>
           </div>
 
-          <aside class="hero-card">
+          <aside class="hero-image-panel">
             <img
               class="hero-product-image"
               src="images/xCONNECT_2.0_visual.png"
               alt="xarvio® connect packaging"
             />
-            <strong>What xarvio® connect does</strong>
-            <ul class="hero-list">
-              <li>
-                <span class="check">✓</span
-                ><span
-                  >Connects via ISOBUS/CANBUS and USB for mixed-fleet
-                  compatibility</span
-                >
-              </li>
-              <li>
-                <span class="check">✓</span
-                ><span
-                  >Sends prescription maps to the terminal and returns
-                  documentation data</span
-                >
-              </li>
-              <li>
-                <span class="check">✓</span
-                ><span
-                  >Supports automatic documentation and over-the-air
-                  updates</span
-                >
-              </li>
-            </ul>
           </aside>
         </div>
       </div>
     </header>
 
     <main>
+      <section class="section">
+        <div class="container">
+          <h2>Why xarvio® CONNECT 2.0</h2>
+          <div class="benefit-list">
+            <article class="benefit-item">
+              <div class="benefit-icon" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M17 19a1 1 0 0 1-1-1v-2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a1 1 0 0 1-1 1z" />
+                  <path d="M17 21v-2" />
+                  <path d="M19 14V6.5a1 1 0 0 0-7 0v11a1 1 0 0 1-7 0V10" />
+                  <path d="M21 21v-2" />
+                  <path d="M3 5V3" />
+                  <path d="M4 10a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2a2 2 0 0 1-2 2z" />
+                  <path d="M7 5V3" />
+                </svg>
+              </div>
+              <div>
+                <strong>Brand-agnostic connectivity</strong>
+                <p>
+                  Connects mixed fleets and older equipment, avoiding extra OEM
+                  hardware and display costs.
+                </p>
+              </div>
+            </article>
+            <article class="benefit-item">
+              <div class="benefit-icon" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="10" cy="7" r="1" />
+                  <circle cx="4" cy="20" r="1" />
+                  <path d="M4.7 19.3 19 5" />
+                  <path d="m21 3-3 1 2 2Z" />
+                  <path d="M9.26 7.68 5 12l2 5" />
+                  <path d="m10 14 5 2 3.5-3.5" />
+                  <path d="m18 12 1-1 1 1-1 1Z" />
+                </svg>
+              </div>
+              <div>
+                <strong>Plug-and-play setup</strong>
+                <p>
+                  Fast USB-based setup with built-in wireless connectivity.
+                </p>
+              </div>
+            </article>
+            <article class="benefit-item">
+              <div class="benefit-icon" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" />
+                  <path d="m21.854 2.147-10.94 10.939" />
+                </svg>
+              </div>
+              <div>
+                <strong>Seamless prescription delivery</strong>
+                <p>
+                  Wireless transfer of flat-rate and variable-rate application
+                  maps directly to machines.
+                </p>
+              </div>
+            </article>
+            <article class="benefit-item">
+              <div class="benefit-icon" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+                  <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                  <path d="m9 14 2 2 4-4" />
+                </svg>
+              </div>
+              <div>
+                <strong>Automatic documentation</strong>
+                <p>
+                  Captures applied rates, yield, and task data directly into
+                  xarvio® FIELD MANAGER.
+                </p>
+              </div>
+            </article>
+            <article class="benefit-item">
+              <div class="benefit-icon" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+                  <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+                </svg>
+              </div>
+              <div>
+                <strong>Supports xarvio® BIOENERGY workflows</strong>
+                <p>
+                  Enables participation in 45Z and sustainability programs by
+                  automatically capturing required in-field operational data.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section class="section">
         <div class="container">
           <h2>Available purchase options</h2>
@@ -578,9 +235,9 @@
               <div class="title-row">
                 <h3>xarvio® connect Kit + 1 Year License</h3>
               </div>
-              <p class="price">$1,470</p>
+              <p class="price">$1,540</p>
               <p class="price-sub">
-                One-time checkout today, then $370/year for license renewal
+                One-time checkout today, then $355/year for license renewal
               </p>
               <p>
                 Best option for new purchases. Includes the hardware kit plus
@@ -613,7 +270,7 @@
               <div class="title-row">
                 <h3>xarvio® connect Kit</h3>
               </div>
-              <p class="price">$1,100</p>
+              <p class="price">$1,185</p>
               <p class="price-sub">One-time purchase</p>
               <p>
                 Wireless connectivity hardware for use with the xarvio® FIELD
@@ -648,7 +305,7 @@
               <div class="title-row">
                 <h3>Wireless Connectivity License</h3>
               </div>
-              <p class="price">$370</p>
+              <p class="price">$355</p>
               <p class="price-sub">Billed yearly</p>
               <p>
                 Annual license for wireless connectivity and data exchange with
